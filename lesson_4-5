@@ -1,0 +1,17 @@
+"""Lesson 4.5
+GET
+    Parameters in URL
+    Used for fetching documents
+    Limited by maximum URL length
+    OK to cache
+    Shouldn't change the server (can make the same request repeatedly)
+
+POST
+    Parameters in body
+    Used for updating data
+    No max length
+    Not OK to cache
+    OK to change the server (that's the point)
+
+See main.py for code examples
+"""
