@@ -1,0 +1,61 @@
+Lesson 4.7: HTML Templates
+A template is a library to build complicated strings.
+
+jinga2: jinja.pocoo.org
+
+Variable Substitution
+{{variable}}
+{{}} -> print
+
+If Statement Syntax
+{% statement %}
+    output
+{% end statement %}
+
+{% if name == "Steve" %}
+    Hello, Steve!
+{% else %}
+    Who are you?
+{% endif %}
+
+For Loop
+{% for statement %}
+    body
+{% endfor %}
+
+FizzBuzz
+    <ul>
+        {% for x in range(1,n+1) %}
+            <li>{% if x % 15 == 0 %}
+                FizzBuzz
+            {% elif x % 3 == 0 %}
+                Fizz
+            {% elif x % 5 == 0 %}
+                Buzz
+            {% else %}
+                {{x}}
+            {% endif %}</li>
+        {% endfor %}
+    </ul>
+
+Escaping Text
+    Add "| escape" to variables
+    Add "autoescape = True" to jinja environment
+    Add "| safe" to variables to disable autoescape
+
+Tips
+    Always automatically escape variables when possible
+    Minimize the code in templates
+    Minimize the HTML in code (like zero)
+
+Template Inheritance
+    {% extends "x.html" %} to make a file use a template
+    {% block content %}
+        Content that fits inside the inherited template
+    {% endblock %}
+
+Template Review
+    Separate different types of code
+    More readable code
+    More readable websites
+    HTML that is much easier to modify
